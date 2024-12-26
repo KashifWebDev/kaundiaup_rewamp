@@ -5,4 +5,5 @@ return [
     'last_week' => 'Last Week',
     'last_month' => 'Last Month',
     'all_certificates' => 'All Certificates',
+    'search' => 'Search',
 ];

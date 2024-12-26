@@ -5,10 +5,12 @@ use App\Http\Controllers\FamilyManagementController;
 use App\Http\Controllers\HeirManagementController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TradeLicenseController;
+use App\Http\Controllers\BasicSettings;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
+//    return view('welcome');
 });
 
 Route::get('locale/{locale}', function ($locale) {
@@ -30,13 +32,13 @@ Route::middleware('auth')->group(function () {
 });
 
 // Civic Management
-Route::prefix('civic-management')->name('civic.')->group(function () {
+Route::middleware('auth')->prefix('civic-management')->name('civic.')->group(function () {
     Route::get('/new-applicants', [CivicManagementController::class, 'newApplicants'])->name('new_applicants');
     Route::get('/certificate-recipients', [CivicManagementController::class, 'certificateRecipients'])->name('certificate_recipients');
 });
 
 // Trade License Management
-Route::prefix('trade-license-management')->name('trade.')->group(function () {
+Route::middleware('auth')->prefix('trade-license-management')->name('trade.')->group(function () {
     Route::get('/new-applicants', [TradeLicenseController::class, 'newApplicants'])->name('new_applicants');
     Route::get('/certificate-recipients', [TradeLicenseController::class, 'certificateRecipients'])->name('certificate_recipients');
     Route::get('/renewal-applicants', [TradeLicenseController::class, 'renewalApplicants'])->name('renewal_applicants');
@@ -44,16 +46,21 @@ Route::prefix('trade-license-management')->name('trade.')->group(function () {
 });
 
 // Heir Management
-Route::prefix('heir-management')->name('heir.')->group(function () {
+Route::middleware('auth')->prefix('heir-management')->name('heir.')->group(function () {
     Route::get('/new-applicants', [HeirManagementController::class, 'newApplicants'])->name('new_applicants');
     Route::get('/certificate-recipients', [HeirManagementController::class, 'certificateRecipients'])->name('certificate_recipients');
     Route::get('/expired-heir', [HeirManagementController::class, 'expiredHeir'])->name('expired_heir');
 });
 
 // Family Management
-Route::prefix('family-management')->name('family.')->group(function () {
+Route::middleware('auth')->prefix('family-management')->name('family.')->group(function () {
     Route::get('/new-applicants', [FamilyManagementController::class, 'newApplicants'])->name('new_applicants');
     Route::get('/certificate-recipients', [FamilyManagementController::class, 'certificateRecipients'])->name('certificate_recipients');
+});
+
+// Union Setup
+Route::middleware('auth')->prefix('union-setup')->name('union-setup.')->group(function () {
+    Route::get('/union-setup', [BasicSettings::class, 'index'])->name('index');
 });
 
 require __DIR__.'/auth.php';

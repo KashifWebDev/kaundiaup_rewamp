@@ -5,4 +5,5 @@ return [
     'last_week' => 'শেষ সপ্তাহ',
     'last_month' => 'শেষ মাস',
     'all_certificates' => 'সব সার্টিফিকেট',
+    'search' => 'অনুসন্ধান',
 ];

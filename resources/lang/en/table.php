@@ -25,5 +25,8 @@ return [
     'organization_name' => 'Organization Name',
     'expiration_date' => 'Expiration Date',
     'mail' => 'Mail',
+    'total_heirs' => 'Total Heirs',
+    'fathers_name' => 'Father\'s Name',
+    'total_members' => 'Total Members',
 ];
 

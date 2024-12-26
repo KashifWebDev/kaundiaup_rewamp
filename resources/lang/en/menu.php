@@ -12,5 +12,6 @@ return [
     'dashboard' => 'Dashboard',
     'admin' => 'Admin',
     'app' => 'App',
+    'union_setup' => 'Union Setup',
 ];
 

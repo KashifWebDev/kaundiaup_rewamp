@@ -14,41 +14,24 @@
             <div class="input-group-text"><i data-feather="search"></i></div>
         </div>
     </form>
-    <a href="{{ route('locale.change', ['locale' => 'en']) }}">English</a>
-    <a href="{{ route('locale.change', ['locale' => 'bn']) }}">বাংলা</a>
 
     <!-- Navbar Items-->
     <ul class="navbar-nav align-items-center ms-auto">
         <!-- Documentation Dropdown-->
         <li class="nav-item dropdown no-caret d-none d-md-block me-3">
             <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="fw-500">Documentation</div>
+                <div class="fw-500">{{ __('messages.language') }}</div>
                 <i class="fas fa-chevron-right dropdown-arrow"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-end py-0 me-sm-n15 me-lg-0 o-hidden animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
-                <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro" target="_blank">
-                    <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="book"></i></div>
-                    <div>
-                        <div class="small text-gray-500">Documentation</div>
-                        Usage instructions and reference
-                    </div>
+                <a class="dropdown-item py-3" href="{{ route('locale.change', ['locale' => 'en']) }}" >
+                    English
                 </a>
                 <div class="dropdown-divider m-0"></div>
-                <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/components" target="_blank">
-                    <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="code"></i></div>
-                    <div>
-                        <div class="small text-gray-500">Components</div>
-                        Code snippets and reference
-                    </div>
+                <a class="dropdown-item py-3" href="{{ route('locale.change', ['locale' => 'bn']) }}" >
+                    বাংলা
                 </a>
                 <div class="dropdown-divider m-0"></div>
-                <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/changelog" target="_blank">
-                    <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="file-text"></i></div>
-                    <div>
-                        <div class="small text-gray-500">Changelog</div>
-                        Updates and changes
-                    </div>
-                </a>
             </div>
         </li>
         <!-- Navbar Search Dropdown-->
@@ -168,9 +151,12 @@
                     <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
                     Account
                 </a>
-                <a class="dropdown-item" href="#!">
+                <a class="dropdown-item">
                     <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
-                    Logout
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="border-0 bg-transparent">Logout</button>
+                    </form>
                 </a>
             </div>
         </li>

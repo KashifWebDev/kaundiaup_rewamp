@@ -25,4 +25,7 @@ return [
     'expiration_date' => 'মেয়াদ উত্তীর্ণের তারিখ',
     'mail' => 'মেইল',
     'regenerate' => 'পুনরায় জেনারেট',
+    'total_heirs' => 'মোট উত্তরাধিকারী',
+    'fathers_name' => 'পিতার নাম',
+    'total_members' => 'মোট সদস্য',
 ];

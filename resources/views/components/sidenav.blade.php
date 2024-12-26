@@ -85,8 +85,14 @@
                     </nav>
                 </div>
 
+                <a class="nav-link" href="{{ route('union-setup.index') }}">
+                    <div class="nav-link-icon"><i data-feather="settings"></i></div>
+                    {{ __('menu.union_setup') }}
+                </a>
 
             </div>
+
+
         </div>
         <!-- Sidenav Footer-->
         <div class="sidenav-footer">

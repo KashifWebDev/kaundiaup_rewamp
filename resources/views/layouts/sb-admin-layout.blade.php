@@ -18,6 +18,9 @@
         tbody tr td img{
             height: 45px !important;
         }
+        #union_setup_form .row .col-md-6 div{
+            margin-top: 15px;
+        }
     </style>
 </head>
 <body class="nav-fixed">
