@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\CivicManagementController;
 use App\Http\Controllers\FamilyManagementController;
 use App\Http\Controllers\HeirManagementController;
@@ -61,6 +62,12 @@ Route::middleware('auth')->prefix('family-management')->name('family.')->group(f
 // Union Setup
 Route::middleware('auth')->prefix('union-setup')->name('union-setup.')->group(function () {
     Route::get('/union-setup', [BasicSettings::class, 'index'])->name('index');
+});
+
+// Certificate
+Route::middleware('auth')->prefix('certificate')->name('certificate.')->group(function () {
+    Route::get('/generate', [CertificateController::class, 'generate'])->name('generate');
+    Route::get('/generateTrade', [CertificateController::class, 'generateTrade'])->name('generateTrade');
 });
 
 require __DIR__.'/auth.php';

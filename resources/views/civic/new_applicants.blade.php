@@ -41,7 +41,7 @@
                         <td>+123456789</td>
                         <td>2024-01-01</td>
                         <td>
-                            <button class="btn btn-success btn-sm">{{ __('table.generate') }}</button>
+                            <a href="{{ route('certificate.generate') }}" class="btn btn-success btn-sm">{{ __('table.generate') }}</a>
                             <button class="btn btn-danger btn-sm">{{ __('table.delete') }}</button>
                         </td>
                     </tr>

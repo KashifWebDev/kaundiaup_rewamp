@@ -26,7 +26,7 @@
                     <td>ABC Corp</td>
                     <td>2024-12-01</td>
                     <td>
-                        <button class="btn btn-primary btn-sm">{{ __('table.generate') }}</button>
+                        <a href="{{ route('certificate.generateTrade') }}" class="btn btn-primary btn-sm">{{ __('table.generate') }}</a>
                         <button class="btn btn-danger btn-sm">{{ __('table.delete') }}</button>
                     </td>
                 </tr>
