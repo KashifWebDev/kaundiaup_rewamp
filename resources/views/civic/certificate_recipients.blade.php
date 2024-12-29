@@ -14,4 +14,41 @@
             </div>
         </div>
     </div>
+
+    <div class="card-body">
+        <table id="datatablesSimple" class="table">
+            <thead>
+            <tr>
+                <th>{{ __('table.photo') }}</th>
+                <th>{{ __('table.name') }}</th>
+                <th>{{ __('table.tracking_number_certificate_number') }}</th>
+                <th>{{ __('table.delivery_type') }}</th>
+                <th>{{ __('table.mobile') }}</th>
+                <th>{{ __('table.organization_name') }}</th>
+                <th>{{ __('table.generate_date') }}</th>
+                <th>{{ __('table.certificate') }}</th>
+                <th>{{ __('table.money_receipt') }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Example row -->
+            <tr>
+                <td><img src="https://www.kaundiaup.com//library/profile/1394474149n20241226122258.jpg" alt="{{ __('alt.recipient_photo') }}" class="img-thumbnail"></td>
+                <td>Jane Doe</td>
+                <td>654321</td>
+                <td>Express</td>
+                <td>+987654321</td>
+                <td>XYZ Corp</td>
+                <td>2024-01-10</td>
+                <td>
+                    <button class="btn btn-info btn-sm">{{ __('table.bengali') }}</button>
+                    <button class="btn btn-success btn-sm">{{ __('table.english') }}</button>
+                </td>
+                <td>
+                    <button class="btn btn-warning btn-sm">{{ __('table.print') }}</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </x-app-layout>
