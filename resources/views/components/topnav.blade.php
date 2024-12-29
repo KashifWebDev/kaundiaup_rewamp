@@ -18,22 +18,24 @@
     <!-- Navbar Items-->
     <ul class="navbar-nav align-items-center ms-auto">
         <!-- Documentation Dropdown-->
-        <li class="nav-item dropdown no-caret d-none d-md-block me-3">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="fw-500">{{ __('messages.language') }}</div>
-                <i class="fas fa-chevron-right dropdown-arrow"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-end py-0 me-sm-n15 me-lg-0 o-hidden animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
-                <a class="dropdown-item py-3" href="{{ route('locale.change', ['locale' => 'en']) }}" >
-                    English
+        @if(app()->environment('local'))
+            <li class="nav-item dropdown no-caret d-none d-md-block me-3">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="fw-500">{{ __('messages.language') }}</div>
+                    <i class="fas fa-chevron-right dropdown-arrow"></i>
                 </a>
-                <div class="dropdown-divider m-0"></div>
-                <a class="dropdown-item py-3" href="{{ route('locale.change', ['locale' => 'bn']) }}" >
-                    বাংলা
-                </a>
-                <div class="dropdown-divider m-0"></div>
-            </div>
-        </li>
+                <div class="dropdown-menu dropdown-menu-end py-0 me-sm-n15 me-lg-0 o-hidden animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
+                    <a class="dropdown-item py-3" href="{{ route('locale.change', ['locale' => 'en']) }}" >
+                        English
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                    <a class="dropdown-item py-3" href="{{ route('locale.change', ['locale' => 'bn']) }}" >
+                        বাংলা
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                </div>
+            </li>
+        @endif
         <!-- Navbar Search Dropdown-->
         <!-- * * Note: * * Visible only below the lg breakpoint-->
         <li class="nav-item dropdown no-caret me-3 d-lg-none">

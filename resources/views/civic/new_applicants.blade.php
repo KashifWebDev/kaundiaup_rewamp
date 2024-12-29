@@ -41,8 +41,8 @@
                         <td>+123456789</td>
                         <td>2024-01-01</td>
                         <td>
-                            <button class="btn btn-success btn-sm">{{ __('buttons.generate') }}</button>
-                            <button class="btn btn-danger btn-sm">{{ __('buttons.delete') }}</button>
+                            <button class="btn btn-success btn-sm">{{ __('table.generate') }}</button>
+                            <button class="btn btn-danger btn-sm">{{ __('table.delete') }}</button>
                         </td>
                     </tr>
                     </tbody>

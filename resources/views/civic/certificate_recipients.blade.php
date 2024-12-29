@@ -13,7 +13,5 @@
                 <button class="btn btn-primary w-100">{{ __('table.search') }}</button>
             </div>
         </div>
-
-<adn></adn>
     </div>
 </x-app-layout>
