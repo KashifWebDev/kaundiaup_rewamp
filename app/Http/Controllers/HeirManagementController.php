@@ -20,4 +20,9 @@ class HeirManagementController extends Controller
     {
         return view('heir.expired_heir');
     }
+
+    public function generate()
+    {
+        return view('heir.generate');
+    }
 }

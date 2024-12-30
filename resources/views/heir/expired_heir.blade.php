@@ -28,7 +28,7 @@
                     <td>+321654987</td>
                     <td>2024-01-15</td>
                     <td>
-                        <button class="btn btn-info btn-sm">{{ __('table.regenerate') }}</button>
+                        <a href="{{ route('heir.generate') }}" class="btn btn-info btn-sm">{{ __('table.regenerate') }}</a>
                     </td>
                 </tr>
                 </tbody>

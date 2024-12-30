@@ -51,6 +51,7 @@ Route::middleware('auth')->prefix('heir-management')->name('heir.')->group(funct
     Route::get('/new-applicants', [HeirManagementController::class, 'newApplicants'])->name('new_applicants');
     Route::get('/certificate-recipients', [HeirManagementController::class, 'certificateRecipients'])->name('certificate_recipients');
     Route::get('/expired-heir', [HeirManagementController::class, 'expiredHeir'])->name('expired_heir');
+    Route::get('/generate', [HeirManagementController::class, 'generate'])->name('generate');
 });
 
 // Family Management
@@ -68,6 +69,9 @@ Route::middleware('auth')->prefix('union-setup')->name('union-setup.')->group(fu
 Route::middleware('auth')->prefix('certificate')->name('certificate.')->group(function () {
     Route::get('/generate', [CertificateController::class, 'generate'])->name('generate');
     Route::get('/generateTrade', [CertificateController::class, 'generateTrade'])->name('generateTrade');
+    Route::get('/TradeRenewal', [CertificateController::class, 'TradeRenewal'])->name('TradeRenewal');
+    Route::get('/showBn', [CertificateController::class, 'showBn'])->name('showBn');
+    Route::get('/showEn', [CertificateController::class, 'showEn'])->name('showEn');
 });
 
 require __DIR__.'/auth.php';

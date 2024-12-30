@@ -24,7 +24,7 @@
                     <td>+123456789</td>
                     <td>2024-12-26</td>
                     <td>
-                        <button class="btn btn-info btn-sm">{{ __('table.generate') }}</button>
+                        <a href="{{ route('heir.generate') }}" class="btn btn-info btn-sm">{{ __('table.generate') }}</a>
                         <button class="btn btn-danger btn-sm">{{ __('table.delete') }}</button>
                     </td>
                 </tr>

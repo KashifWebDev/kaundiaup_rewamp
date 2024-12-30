@@ -27,7 +27,7 @@
                     <td>2023-06-01</td>
                     <td>
                         <button class="btn btn-primary btn-sm">{{ __('table.mail') }}</button>
-                        <button class="btn btn-danger btn-sm">{{ __('table.regenerate') }}</button>
+                        <a href="{{ route('certificate.TradeRenewal') }}" class="btn btn-danger btn-sm">{{ __('table.regenerate') }}</a>
                     </td>
                 </tr>
                 </tbody>
