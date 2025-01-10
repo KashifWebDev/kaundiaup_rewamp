@@ -25,4 +25,14 @@ class TradeLicenseController extends Controller
     {
         return view('trade.expired_trade_license');
     }
+
+    public function showEnCert()
+    {
+        return view('trade.show-en-certificate');
+    }
+
+    public function showBnCert()
+    {
+        return view('trade.show-bn-certificate');
+    }
 }

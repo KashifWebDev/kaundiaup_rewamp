@@ -36,8 +36,8 @@
                     <td>XYZ Corp</td>
                     <td>2024-01-10</td>
                     <td>
-                        <a href="{{ route('certificate.showBn') }}" target="_blank" class="btn btn-info btn-sm">{{ __('table.bengali') }}</a>
-                        <a href="{{ route('certificate.showEn') }}" target="_blank" class="btn btn-success btn-sm">{{ __('table.english') }}</a>
+                        <a href="{{ route('trade.showBnCert') }}" target="_blank" class="btn btn-info btn-sm">{{ __('table.bengali') }}</a>
+                        <a href="{{ route('trade.showEnCert') }}" target="_blank" class="btn btn-success btn-sm">{{ __('table.english') }}</a>
                     </td>
                     <td>
                         <button class="btn btn-warning btn-sm">{{ __('table.print') }}</button>

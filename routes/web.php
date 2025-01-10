@@ -44,6 +44,8 @@ Route::middleware('auth')->prefix('trade-license-management')->name('trade.')->g
     Route::get('/certificate-recipients', [TradeLicenseController::class, 'certificateRecipients'])->name('certificate_recipients');
     Route::get('/renewal-applicants', [TradeLicenseController::class, 'renewalApplicants'])->name('renewal_applicants');
     Route::get('/expired-trade-license', [TradeLicenseController::class, 'expiredTradeLicense'])->name('expired_trade_license');
+    Route::get('/en-cert', [TradeLicenseController::class, 'showEnCert'])->name('showEnCert');
+    Route::get('/bn-cert', [TradeLicenseController::class, 'showBnCert'])->name('showBnCert');
 });
 
 // Heir Management
@@ -52,12 +54,16 @@ Route::middleware('auth')->prefix('heir-management')->name('heir.')->group(funct
     Route::get('/certificate-recipients', [HeirManagementController::class, 'certificateRecipients'])->name('certificate_recipients');
     Route::get('/expired-heir', [HeirManagementController::class, 'expiredHeir'])->name('expired_heir');
     Route::get('/generate', [HeirManagementController::class, 'generate'])->name('generate');
+    Route::get('/en-cert', [HeirManagementController::class, 'showEnCert'])->name('showEnCert');
+    Route::get('/bn-cert', [HeirManagementController::class, 'showBnCert'])->name('showBnCert');
 });
 
 // Family Management
 Route::middleware('auth')->prefix('family-management')->name('family.')->group(function () {
     Route::get('/new-applicants', [FamilyManagementController::class, 'newApplicants'])->name('new_applicants');
     Route::get('/certificate-recipients', [FamilyManagementController::class, 'certificateRecipients'])->name('certificate_recipients');
+    Route::get('/en-cert', [FamilyManagementController::class, 'showEnCert'])->name('showEnCert');
+    Route::get('/bn-cert', [FamilyManagementController::class, 'showBnCert'])->name('showBnCert');
 });
 
 // Union Setup

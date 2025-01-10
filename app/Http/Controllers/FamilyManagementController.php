@@ -15,4 +15,14 @@ class FamilyManagementController extends Controller
     {
         return view('family.certificate_recipients');
     }
+
+    public function showEnCert()
+    {
+        return view('family.show-en-certificate');
+    }
+
+    public function showBnCert()
+    {
+        return view('family.show-bn-certificate');
+    }
 }

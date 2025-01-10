@@ -25,4 +25,14 @@ class HeirManagementController extends Controller
     {
         return view('heir.generate');
     }
+
+    public function showEnCert()
+    {
+        return view('heir.show-en-certificate');
+    }
+
+    public function showBnCert()
+    {
+        return view('heir.show-bn-certificate');
+    }
 }
